@@ -1,41 +1,35 @@
-import {
-  Body,
-  Controller,
-  Delete,
-  Get,
-  Param,
-  Post,
-  Put,
-} from '@nestjs/common';
+import { Body, Controller, Delete, Get, Param, Post, Put } from "@nestjs/common";
 import { Livro } from './livro.model';
-import { LivrosService } from './livros.service';
+import { LivrosService } from "./livros.service";
 
 @Controller('livros')
 export class LivrosController {
-  constructor(private livrosService: LivrosService) {}
+    constructor(private livrosService: LivrosService) {
 
-  @Get() //Obtém dados
-  obterTodos(): Livro[] {
-    return this.livrosService.obterTodos();
-  }
+    }
 
-  @Get(':id') //Obtém dados
-  obterUm(@Param() params): Livro {
-    return this.livrosService.obterUm(params.id);
-  }
+    @Get()
+    obterTodos(): Livro[] {
+        return this.livrosService.obterTodos();
+    }
 
-  @Post() //Criar dados
-  criar(@Body() livro: Livro) {
-    this.livrosService.criar(livro);
-  }
+    @Get(':id')
+    obterUm(@Param() params): Livro {
+        return this.livrosService.obterUm(params.id);
+    }
 
-  @Put() //Alterar dados
-  alterar(@Body() livro: Livro): Livro {
-    return this.livrosService.alterar(livro);
-  }
+    @Post()
+    criar(@Body() livro: Livro) {
+        this.livrosService.criar(livro);
+    }
 
-  @Delete(':id') //Apagar dados
-  apagar(@Param() params) {
-    this.livrosService.apagar(params.id);
-  }
+    @Put()
+    alterar(@Body() livro: Livro): Livro {
+        return this.livrosService.alterar(livro);
+    }
+
+    @Delete(':id')
+    apagar(@Param() params) {
+        this.livrosService.apagar(params.id);
+    }
 }

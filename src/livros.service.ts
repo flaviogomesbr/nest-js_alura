@@ -1,31 +1,31 @@
-import { Injectable } from '@nestjs/common';
-import { Livro } from './livro.model';
+import { Injectable } from "@nestjs/common";
+import { Livro } from "./livro.model";
 
 @Injectable()
 export class LivrosService {
-  livros: Livro[] = [
-    new Livro('LIV01', 'Livro TDD e BDD na prática', 29.9),
-    new Livro('LIV02', 'Livro Iniciando com Flutter', 39.9),
-    new Livro('LIV03', 'Livro Inteligência Artificial como Serviço', 29.9),
-  ];
+    livros: Livro[] = [
+        // new Livro("LIV01", "Livro TDD e BDD na prática", 29.90),
+        // new Livro("LIV02", "Livro Iniciando com Flutter", 39.90),
+        // new Livro("LIV03", "Inteligência artificial como serviço", 29.90),
+    ];
 
-  obterTodos(): Livro[] {
-    return this.livros;
-  }
+    obterTodos(): Livro[] {
+        return this.livros;
+    }
 
-  obterUm(id: number): Livro {
-    return this.livros[0];
-  }
+    obterUm(id: number): Livro {
+        return this.livros[0];
+    }
 
-  criar(livro: Livro) {
-    this.livros.push(livro);
-  }
+    criar(livro: Livro) {
+        this.livros.push(livro);
+    }
 
-  alterar(livro: Livro): Livro {
-    return livro;
-  }
+    alterar(livro: Livro): Livro {
+        return livro;
+    }
 
-  apagar(id: number) {
-    this.livros.pop();
-  }
+    apagar(id: number) {
+        this.livros.pop();
+    }
 }
