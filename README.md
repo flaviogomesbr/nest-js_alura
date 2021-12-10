@@ -24,6 +24,10 @@
   <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
   [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
+## Course from Alura
+
+[Alura - NestJS: Criando uma API Rest com TypeScript](https://cursos.alura.com.br/course/nestjs-api-rest-typescript) course from Alura by Rodolfo Ghiggi.
+
 ## Description
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
